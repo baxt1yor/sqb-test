@@ -32,4 +32,9 @@ class CurrencyChild extends Model
     {
         return $this->hasOne(Currency::class, 'id', 'currency_id');
     }
+
+    public function getValueAttribute(): float
+    {
+        return floatval(implode(".", explode(",", $this->attributes["value"])));
+    }
 }

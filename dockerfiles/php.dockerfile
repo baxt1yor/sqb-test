@@ -21,12 +21,11 @@ RUN sed -i "s/user = www-data/user = laravel/g" /usr/local/etc/php-fpm.d/www.con
 RUN sed -i "s/group = www-data/group = laravel/g" /usr/local/etc/php-fpm.d/www.conf
 RUN echo "php_admin_flag[log_errors] = on" >> /usr/local/etc/php-fpm.d/www.conf
 
-RUN docker-php-ext-install pdo pdo_mysql mbstring exif pcntl bcmath gd
+RUN docker-php-ext-install pdo pdo_mysql
 
 COPY ./entrypoint.sh /entrypoint.sh
 
 RUN chown -R www-data:www-data /var/www/html
-RUN chmod 777 /var/www/html/storage
 RUN chmod +x /entrypoint.sh
 
 CMD ["php-fpm", "-y", "/usr/local/etc/php-fpm.conf", "-R"]

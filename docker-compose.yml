@@ -12,6 +12,7 @@ services:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
     container_name: nginx
+    restart: unless-stopped
     ports:
       - "8001:80"
     volumes:
@@ -38,7 +39,7 @@ services:
       SERVICE_NAME: mysql
     volumes:
       - ./dockerfiles/dump:/docker-entrypoint-initdb.d
-#      - ./dockerfiles/mysql/my.cnf:/etc/mysql/my.cnf
+    #      - ./dockerfiles/mysql/my.cnf:/etc/mysql/my.cnf
     networks:
       - laravel
 
@@ -50,6 +51,7 @@ services:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
     container_name: php
+    restart: unless-stopped
     volumes:
       - ./src:/var/www/html:delegated
       - ./dockerfiles/php/local.ini:/usr/local/etc/php/conf.d/local.ini

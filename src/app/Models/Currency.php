@@ -31,6 +31,7 @@ class Currency extends Model
         "numCode" => "integer",
         "charCode" => "string",
         "name" => "string",
+        "created_at" => "datetime"
     ];
 
     public function currencyChildes(): HasMany

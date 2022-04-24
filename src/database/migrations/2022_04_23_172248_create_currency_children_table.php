@@ -17,6 +17,7 @@ class CreateCurrencyChildrenTable extends Migration
             $table->bigIncrements('id');
             $table->integer('nominal');
             $table->string("value");
+            $table->date("date");
             $table->foreignId('currency_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->softDeletes();
             $table->timestamps();
