@@ -1,13 +1,13 @@
 ### ishlatish juda oddiy bu buyruqni terminal ga kirib bering
-##1`composer install`
+##1 `composer install`
 
-##2`cp .env.example .env`
+##2 `cp .env.example .env`
 
-##3`docker-compose build`
+##3 `docker-compose build`
 
-##4`docker-compose up -d`
+##4 `docker-compose up -d`
 
-##5`docker-compose exec php php artisan migrate --seed`
+##5 `docker-compose exec php php artisan migrate --seed`
 
 #### agarda sizda docker o'rnatilmagan bo'lsa iltimos [docker.com](https://docs.docker.com) sayt orqali tanishib chiqing
 #### command 1 ishlar bajarilgadan keyin [localhost](http://127.0.0.1:8001) orqali ko'rishingiz mumkin
