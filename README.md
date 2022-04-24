@@ -1,6 +1,6 @@
 ### ishlatish juda oddiy bu buyruqni terminal ga kirib bering
-##1`composer install`
-##1`cp .env.example .env`
+##1`composer install` \n
+##1`cp .env.example .env`\n
 ##2`docker-compose build`
 ##3`docker-compose up -d`
 ##4`docker-compose exec php php artisan migrate --seed`
