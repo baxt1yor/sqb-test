@@ -1,5 +1,6 @@
 ### ishlatish juda oddiy bu buyruqni terminal ga kirib bering
-## 1 can src
+## 1 `cd src`
+
 ## 2 `composer install`
 
 ## 3 `cp .env.example .env`
