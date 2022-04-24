@@ -23,11 +23,6 @@ RUN echo "php_admin_flag[log_errors] = on" >> /usr/local/etc/php-fpm.d/www.conf
 
 RUN docker-php-ext-install pdo pdo_mysql
 
-COPY ./entrypoint.sh /entrypoint.sh
-
 RUN chown -R www-data:www-data /var/www/html
-RUN chmod +x /entrypoint.sh
 
 CMD ["php-fpm", "-y", "/usr/local/etc/php-fpm.conf", "-R"]
-
-ENTRYPOINT ["/entrypoint.sh"]
